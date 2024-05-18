@@ -5,13 +5,13 @@ export default defineConfig({
   title: "My Fish",
   description: "我的网站",
   srcDir: 'packages',
-  // 路由重写 简洁url
-  rewrites: {
-    'home/src/index.md': "/index.md",
-    '测试动态路由/src/测试.md': '/测试.md',
-    '服务器/src/静态网页和阿里云绑定.md': '服务器/静态网页和阿里云绑定.md',
-    'Linux/src/常见Linux命令.md': 'Linux/常见Linux命令.md'
-  },
+  // 路由重写 简洁url 在静态网址上不生效
+  // rewrites: {
+  //   'home/src/index.md': "/index.md",
+  //   '测试动态路由/src/测试.md': '/测试.md',
+  //   '服务器/src/静态网页和阿里云绑定.md': '服务器/静态网页和阿里云绑定.md',
+  //   'Linux/src/常见Linux命令.md': 'Linux/常见Linux命令.md'
+  // },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
