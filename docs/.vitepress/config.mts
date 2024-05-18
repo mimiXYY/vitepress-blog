@@ -15,7 +15,7 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: '首页', link: '/home/src/index' },
+      { text: '首页', link: '/index' },
       { text: '导航', link: '/测试' },
     ],
 
