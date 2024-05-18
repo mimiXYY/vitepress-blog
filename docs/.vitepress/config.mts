@@ -16,21 +16,21 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/home/src/index' },
-      { text: '导航', link: '/测试动态路由/src/测试' },
+      { text: '导航', link: '/测试' },
     ],
 
     sidebar: [
       {
         items: [
-          { text: '测试动态路由', link: '/测试动态路由/src/测试' },
+          { text: '测试动态路由', link: '/测试' },
           {
             text: "Linux", collapsed: true, items: [
-              { text: '常见Linux命令', link: '/Linux/src/常见Linux命令' }
+              { text: '常见Linux命令', link: '/Linux/常见Linux命令' }
             ]
           },
           {
             text: "服务器", collapsed: true, items: [
-              { text: '静态网页和阿里云绑定', link: '/服务器/src/静态网页和阿里云绑定' }
+              { text: '静态网页和阿里云绑定', link: '/服务器/静态网页和阿里云绑定' }
             ]
           },
 
