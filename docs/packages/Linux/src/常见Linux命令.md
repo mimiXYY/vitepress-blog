@@ -21,7 +21,7 @@
     | SEE ALSO    | 相关主题（通常是手册页） |
 -   实操案例
     -   查看ls命令的帮助信息
-    ```纯文本
+    ```
     [root@centos100 ~]# man ls
     ```
 
@@ -32,7 +32,7 @@
   -   help 命令 （功能描述：获得shell内置命令的帮助信息）
 -   案例实操
     -   查看cd命令的帮助信息
-    ```纯文本
+    ```
     [root@centos100 ~]# help cd
     ```
 
@@ -194,7 +194,7 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
   -   pwd    （功能描述：显示当前工作目录的绝对路径）
 -   案例实操
     -   显示当前工作目录的绝对路径
-    ```纯文本
+    ```
     [root@centos100 ~]# pwd
     /root
     ```
@@ -214,7 +214,7 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
     每行列出的信息依次是： 文件类型与权限 链接数 文件属主 文件属组 文件大小用byte来表示 建立或最近修改的时间 名字&#x20;
 - 实操案例
   -   查看当前目录的所有内容信息
-  ```纯文本
+  ```
   [root@centos100 ~]# ls -al
   总用量 80
   dr-xr-x---. 15 root root 4096 11月  7 19:08 .
@@ -316,7 +316,7 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
   -   touch 文件名称
 
 - 实操案例
-  ```纯文本
+  ```
   [root@centos100 ~]# touch xiyou/qujing/sunwukong.txt
   ```
 
@@ -372,20 +372,20 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
 
 -   基本语法
     -   重命名&#x20;
-    ```纯文本
+    ```
     mv oldNameFile newNameFile
     ```
     -   移动文件&#x20;
-    ```纯文本
+    ```
     mv /temp/movefile /targetFolder
     ```
 -   实操案例
     -   重命名
-    ```纯文本
+    ```
     [root@centos100 ~]# mv xiyou/qujing/suwukong.txt xiyou/qujing/houge.txt
     ```
     -   移动文件
-    ```纯文本
+    ```
     [root@centos100 ~]# mv xiyou/qujing/houge.txt ./
     ```
 
@@ -399,23 +399,23 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
     | --- | ------------- |
     | - n | 显示所有行的行号,包括空行 |
 -   经验技巧
-    ```纯文本
+    ```
     一般查看比较小的文件,一屏幕能显示全的
     ```
 -   实操案例
     -   查看文件内容并显示行号
-    ```纯文本
+    ```
     [atguigu@centos100 ~]$ cat -n houge.txt 
     ```
 
 > more 文件分屏查看器
 
 -   基本语法
-    ```纯文本
+    ```
      more 要查看的文件
 
     ```
-    ```纯文本
+    ```
     more指令是一个基于VI编辑器的文本过滤器，它以全屏幕的方式按页显示文本文件的内容。more指令中内置了若干快捷键，详见操作说明。
     ```
 -   操作说明
@@ -430,14 +430,14 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
     | :f          | 输出文件名和当前行的行号            |
 -   实操案例
     -   （1）采用more查看文件
-    ```纯文本
+    ```
     [root@centos100 ~]# more smartd.conf
     ```
 
 > less 分屏显示文件内容
 
 -   基本语法
-    ```纯文本
+    ```
     less指令用来分屏查看文件内容，它的功能与more指令类似，但是比more指令更加强大，支持各种显示终端。less指令在显示文件内容时，并不是一次将整个文件加载之后才显示，而是根据显示需要加载内容，对于显示大型文件具有较高的效率。
 
     less 要查看的文件
@@ -453,14 +453,14 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
     | q           | 离开 less 这个程序；              |
 -   实操案例
     -   （1）采用less查看文件
-    ```纯文本
+    ```
     [root@centos100 ~]# less smartd.conf
     ```
 
 > head显示文件头部内容
 
 -   基本语法
-    ```纯文本
+    ```
     head用于显示文件的开头部分内容，默认情况下head指令显示文件的前10行内容。
 
     head 文件      （功能描述：查看文件头10行内容）
@@ -472,14 +472,14 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
     | -n <行数> | 指定显示头部内容的行数 |
 -   实操案例
     -   （1）查看文件的头2行
-    ```纯文本
+    ```
     [root@centos100 ~]# head -n 2 smartd.conf
     ```
 
 > tail 输出文件尾部内容
 
 -   基本语法
-    ```纯文本
+    ```
     tail用于输出文件中尾部的内容，默认情况下tail指令显示文件的后10行内容。
     （1）tail 文件          （功能描述：查看文件后10行内容）
     （2）tail -n 5 文件     （功能描述：查看文件后5行内容，5可以是任意行数）
@@ -492,18 +492,18 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
     | -f     | 显示文件最新追加的内容，监视文件变化 |
 -   实操案例
     -   （1）查看文件头1行内容
-    ```纯文本
+    ```
     [root@centos100 ~]# tail -n 1 smartd.conf 
     ```
     -   （2）实时追踪该档的所有更新
-    ```纯文本
+    ```
     [root@centos100 ~]# tail -f houge.txt
     ```
 
 > echo 打印信息
 
 -   基本语法
-    ```纯文本
+    ```
      echo输出内容到控制台  System.out.println();
      
      echo [选项] [输出内容]
@@ -519,21 +519,21 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
     | \t   | 制表符，也就是Tab键 |
 -   实操案例
     -   (1) 打印文字信息
-    ```纯文本
+    ```
     [atguigu@centos100 ~]$ echo "hello\tworld"
     hello\tworld
     [atguigu@centos100 ~]$ echo -e "hello\tworld"
     hello   world
     ```
     -   (2) 打印环境变量
-    ```纯文本
+    ```
     [atguigu@centos100 ~]$ echo $PATH
     ```
 
 > \> 覆盖和>>追加
 
 -   基本语法
-    ```纯文本
+    ```
     （1）ll >文件       （功能描述：列表的内容写入文件a.txt中（**覆盖写**））
     （2）ll >>文件      （功能描述：列表的内容**追加**到文件aa.txt的末尾）
     （3）cat 文件1 > 文件2 （功能描述：将文件1的内容覆盖到文件2）
@@ -541,22 +541,22 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
     ```
 -   实操案例
     -   （1）将ls查看信息写入到文件中
-    ```纯文本
+    ```
     [root@centos100 ~]# ls -l>houge.txt
     ```
     -   （2）将ls查看信息追加到文件中
-    ```纯文本
+    ```
     [root@centos100 ~]# ls -l>>houge.txt
     ```
     -   （3）采用echo将hello单词追加到文件中
-    ```纯文本
+    ```
     [root@centos100 ~]# echo hello>>houge.txt
     ```
 
 > ln创建链接和软连接
 
 -   基本语法
-    ```纯文本
+    ```
     链接表示目标资源的另外的访问方式,表示一种路径
     软链接也称为符号链接，类似于windows里的快捷方式，有自己的数据块，主要存放了链接其他文件的路径。
     ln [-s] [原文件或目录] [链接名]       （功能描述：给原文件创建一个链接）
@@ -566,24 +566,24 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
     | -- | ---------- |
     | -s | 创建的链接为 软连接 |
 -   经验技巧
-    ```纯文本
+    ```
     删除软链接： rm -rf 软链接名，而不是rm -rf 软链接名/
     查询：通过ll就可以查看，列表属性第1位是l，尾部会有位置指向。
     ```
 -   实操案例
     -   （1）创建软连接
-    ```纯文本
+    ```
     [root@centos100 ~]# mv houge.txt xiyou/qujing/
     [root@centos100 ~]# ln -s /root/xiyou/qujing/houge.txt /root/houzi
     [root@centos100 ~]# ll
     lrwxrwxrwx. 1 root  root   20 6月 17 12:56 houzi -> xiyou/qujing/houge.txt
     ```
     -   （2）删除软连接
-    ```纯文本
+    ```
     [root@centos100 ~]# rm -rf houzi
     ```
     -   （3）进入软连接实际物理路径
-    ```纯文本
+    ```
     [root@centos100 ~]# ln -s xiyou/qujing/ ./qujing
     [root@centos100 ~]# cd -P qujing/
     ```
@@ -591,16 +591,16 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
 > history查看历史命令
 
 -   基本语法
-    ```纯文本
+    ```
      history                    （功能描述：查看已经执行过历史命令）
     ```
 -   实操案例
     -   （1）查看已经执行过的历史命令
-    ```纯文本
+    ```
     [root@centos100 test1]# history
     ```
     -   (2)   /root/.bash\_history文件中也是历史命令
-    ```纯文本
+    ```
     less /root/.bash_history
     ```
 
@@ -612,7 +612,7 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
 
 > 复制一个系统的配置文件到Root目录下，用以联系vim命令
 
-```纯文本
+```
 [root@192 ~]# cp /etc/smartmontools/smartd.conf /root
 [root@192 ~]# cd /root/
 ```
@@ -656,7 +656,7 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
 > date显示当前时间
 
 -   基本语法
-    ```纯文本
+    ```
     （1）date                            （功能描述：显示当前时间）
     ​（2）date +%Y                        （功能描述：显示当前年份）
     ​（3）date +%m                        （功能描述：显示当前月份）
@@ -665,19 +665,19 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
     ```
 -   实操案例
     -   （1）显示当前时间信息
-    ```纯文本
+    ```
     [root@centos100 ~]# date
     2017年 06月 19日 星期一 20:53:30 CST
 
     ```
     -   （2）显示当前时间年月日
-    ```纯文本
+    ```
     [root@centos100 ~]# date +%Y%m%d
     20170619
 
     ```
     -   （3）显示当前时间年月日时分秒
-    ```纯文本
+    ```
     [root@centos100 ~]# date "+%Y-%m-%d %H:%M:%S"
     2017-06-19 20:54:58
 
@@ -686,19 +686,19 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
 > date显示非当前时间
 
 -   基本语法
-    ```纯文本
+    ```
     （1）date -d '1 days ago'          （功能描述：显示前一天时间）
     （2）date -d '-1 days ago'         （功能描述：显示明天时间）
     ```
 -   实操案例
     -   （1）显示前一天
-    ```纯文本
+    ```
     [root@centos100 ~]# date -d '1 days ago'
     2017年 06月 18日 星期日 21:07:22 CST
 
     ```
     -   （2）显示明天时间
-    ```纯文本
+    ```
     [root@centos100 ~]#date -d '-1 days ago'
     2017年 06月 20日 星期日 21:07:22 CST
 
@@ -707,12 +707,12 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
 > date设置系统时间
 
 -   基本语法
-    ```纯文本
+    ```
       date -s 字符串时间
     ```
 -   实操案例
     -   &#x20;（1）设置系统当前时间
-    ```纯文本
+    ```
     [root@centos100 ~]# date -s "2017-06-19 20:52:18"
     ```
 
@@ -721,13 +721,13 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
 > useradd添加新用户
 
 -   基本语法
-    ```纯文本
+    ```
     useradd 用户名                （功能描述：添加新用户）
     ​useradd -g 组名 用户名         （功能描述：添加新用户到某个组）
     ```
 -   实操案例
     -   （1）添加一个用户
-    ```纯文本
+    ```
     [root@centos100 ~]# useradd tangseng
     [root@centos100 ~]#ll /home/
     ```
@@ -735,24 +735,24 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
 > passwd设置用户密码
 
 -   基本语法
-    ```纯文本
+    ```
     passwd 用户名   （功能描述：设置用户密码）
     ```
 -   实操案例
     -   （1）设置用户的密码
-    ```纯文本
+    ```
     [root@centos100 ~]# passwd tangseng
     ```
 
 > id查看用户是否存在
 
 -   基本语法
-    ```纯文本
+    ```
     id 用户名
     ```
 -   实操案例
     -   （1）查看用户是否存在
-    ```纯文本
+    ```
     [root@centos100 ~]#id tangseng
     ```
 
@@ -760,20 +760,20 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
 
 -   实操案例
     -   (1) 查看创建的所有用户
-    ```纯文本
+    ```
     [root@centos100 ~]# cat /etc/passwd
     ```
 
 > su(switch user )切换用户
 
 -   基本语法
-    ```纯文本
+    ```
     su 用户名称      （功能描述：切换用户，只能获得用户的执行权限，不能获得环境变量）
     su - 用户名称    （功能描述：切换到用户并获得该用户的环境变量及执行权限）
     ```
 -   实操案例
     -   （1）切换用户
-    ```纯文本
+    ```
     [root@centos100 ~]#su tangseng
     [root@centos100 ~]#echo $PATH
     /usr/lib64/qt-3.3/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin
@@ -783,14 +783,14 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
     /usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/tangseng/bin
     ```
     -   &#x20;(2) exit 回退到上一个用户 &#x20;
-    ```纯文本
+    ```
     [root@centos100 ~]#exit
     ```
 
 > userdel删除用户
 
 -   基本语法
-    ```纯文本
+    ```
     （1）userdel 用户名          （功能描述：删除用户但保存用户主目录）
     ​（2）userdel -r 用户名       （功能描述：用户和用户主目录，都删除）
     ```
@@ -800,12 +800,12 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
     | -r | 删除用户的同时，删除与用户相关的所有文件。 |
 -   实操案例
     -   （1）删除用户但保存用户主目录
-    ```纯文本
+    ```
     [root@centos100 ~]#userdel tangseng
     [root@centos100 ~]#ll /home/
     ```
     -   （2）删除用户和用户主目录，都删除
-    ```纯文本
+    ```
     [root@centos100 ~]#useradd zhubajie
     [root@centos100 ~]#ll /home/
     [root@centos100 ~]#userdel -r zhubajie
@@ -815,44 +815,44 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
 > who 查看登录用户信息
 
 -   基本语法
-    ```纯文本
+    ```
     （1）whoami           （功能描述：显示自身用户名称）
     ​（2）who am i         （功能描述：显示登录用户的用户名）
     ```
 -   案例实操
     -   （1）显示自身用户名称
-    ```纯文本
+    ```
     [root@centos100 opt]# whoami
     ```
     -   （2）显示登录用户的用户名
-    ```纯文本
+    ```
     [root@centos100 opt]# who am i
     ```
 
 > sudo 设置普通用户具有root权限
 
 -   基本语法
-    ```纯文本
+    ```
     sudo 命令
     ```
 -   实操案例
     -   (1) 添加atguigu用户，并对其设置密码
-    ```纯文本
+    ```
     [root@centos100 ~]#useradd atguigu
     [root@centos100 ~]#passwd atguigu
     ```
     -   (2)修改配置文件
-    ```纯文本
+    ```
     [root@centos100 ~]#vi /etc/sudoers
     ```
-    ```纯文本
+    ```
     修改 /etc/sudoers 文件，找到下面一行(101行)，在root下面添加一行，如下
 
     \## Allow root to run any commands anywhere
     root  ALL=(ALL)   ALL
     atguigu  ALL=(ALL)   ALL
     ```
-    ```纯文本
+    ```
     或者配置成采用sudo命令时，不需要输入密码
 
     \## Allow root to run any commands anywhere
@@ -862,7 +862,7 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
     修改完毕，现在可以用atguigu帐号登录，然后用命令 sudo ，即可获得root权限进行操作。
     ```
     -   (3)用普通用户在/opt目录下创建一个文件夹
-    ```纯文本
+    ```
     [atguigu@centos100 opt]$ sudo mkdir module
     ```
 
@@ -873,31 +873,31 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
 > groupadd新增组
 
 -   基本语法
-    ```纯文本
+    ```
     groupadd 组名
     ```
 -   实操案例
     -   （1）添加一个xitianqujing组
-    ```纯文本
+    ```
     [root@centos100 opt]#groupadd xitianqujing
     ```
 
 > groupdel删除组
 
 -   基本语法
-    ```纯文本
+    ```
     groupdel 组名
     ```
 -   实操案例
     -   （1）删除xitianqujing组
-    ```纯文本
+    ```
     [root@centos100 opt]# groupdel xitianqujing
     ```
 
 > 查看创建了那些组
 
 -   实操案例
-    ```纯文本
+    ```
     [root@centos100 atguigu]# cat  /etc/group
     ```
 
@@ -905,7 +905,7 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
 
 - 基本语法
 
-  ```纯文本
+  ```
   usermod -g 用户组 用户名
   ```
 
@@ -919,7 +919,7 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
 
   - （1）将用户加入到用户组
 
-  ```纯文本
+  ```
   [root@centos100 opt]#usermod -g xitianqujing tangseng
   ```
 
@@ -941,20 +941,20 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
     -   （4）第7-9位确定其他用户拥有该文件的权限 ,   O →Other
 -   rwx作用到目录和文件的不同含义
     -   作用到文件
-    ```纯文本
+    ```
     [ r ]代表可读(read): 可以读取，查看
     ​[ w ]代表可写(write): 可以修改，但是不能删除该文件，对该文件所在的目录有写权限，才能删除.
     ​[ x ]代表可执行(execute):可以被系统执行
     ```
     -   作用到目录
-    ```纯文本
+    ```
     [ r ]代表可读(read): 可以读取，ls查看目录内容
     ​[ w ]代表可写(write): 可以修改，目录内创建+删除+重命名目录
     [ x ]代表可执行(execute):可以进入该目录
     ```
 -   实操案例
     -   (1)查看文件权限信息
-    ```纯文本
+    ```
     [root@centos100 ~]# ll
     总用量 104
     -rw-------. 1 root root 1248 1月  8 17:36 anaconda-ks.cfg
@@ -963,7 +963,7 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
 
     ```
     -   (2)文件属性介绍
-    ```纯文本
+    ```
     ls -l
     ```
     ![](..//image/q2_pSl919toNE.png)
@@ -977,46 +977,46 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
 
     ![](..//image/q3_8nnL2OIZNs.png)
     -   第一种方式变更权限
-    ```纯文本
+    ```
     chmod [{ugoa}{+-=}{rwx}] 文件或目录
     ```
     -   第二种方式变更权限
-    ```纯文本
+    ```
     chmod [mode=421 ] [文件或目录]
     ```
 -   经验技巧
-    ```纯文本
+    ```
     u:所有者 g:所有组 o:其他人 a:所有人(u、g、o的总和)
     ​r=4 w=2 x=1         
     rwx=4+2+1=7
     ```
 -   实操案例
     -   （1）修改文件使其所属主用户具有执行权限
-    ```纯文本
+    ```
     [root@centos100 ~]# cp xiyou/qujing/houge.txt ./
     [root@centos100 ~]# chmod u+x houge.txt
     ```
     -   （2）修改文件使其所属组用户具有执行权限
-    ```纯文本
+    ```
     [root@centos100 ~]# chmod g+x houge.txt
     ```
     -   （3）修改文件所属主用户执行权限,并使其他用户具有执行权限
-    ```纯文本
+    ```
     [root@centos100 ~]# chmod u-x,o+x houge.txt
     ```
     -   （4）采用数字的方式，设置文件所有者、所属组、其他用户都具有可读可写可执行权限。
-    ```纯文本
+    ```
     [root@centos100 ~]# chmod 777 houge.txt
     ```
     -   （5）修改整个文件夹里面的所有文件的所有者、所属组、其他用户都具有可读写执行权限。
-    ```纯文本
+    ```
     [root@centos100 ~]# chmod -R 777 xiyou/
     ```
 
 > chown 改变所有者
 
 -   基本语法
-    ```纯文本
+    ```
     chown [选项] [最终用户] [文件或目录]     （功能描述：改变文件或者目录的所有者）
     ```
 -   选项说明
@@ -1025,13 +1025,13 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
     | -R | 递归操作 |
 -   实操案例
     -   （1）修改文件所有者
-    ```纯文本
+    ```
     [root@centos100 ~]# chown atguigu houge.txt 
     [root@centos100 ~]# ls -al
     -rwxrwxrwx. 1 atguigu root 551 5月 23 13:02 houge.txt
     ```
     -   （2）递归改变文件所有者和所有组
-    ```纯文本
+    ```
     [root@centos100 xiyou]# ll
     drwxrwxrwx. 2 root root 4096 9月  3 21:20 xiyou
     [root@centos100 xiyou]# chown -R atguigu:atguigu xiyou/
@@ -1042,12 +1042,12 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
 > chgrp改变所属组
 
 -   基本语法
-    ```纯文本
+    ```
     chgrp [最终用户组] [文件或目录]   （功能描述：改变文件或者目录的所属组）
     ```
 -   实操案例
     -   （1）修改文件的所属组
-    ```纯文本
+    ```
     [root@centos100 ~]# chgrp root houge.txt
     [root@centos100 ~]# ls -al
     -rwxrwxrwx. 1 atguigu root 551 5月 23 13:02 houge.txt
@@ -1069,7 +1069,7 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
 > find 查找文件或者目录
 
 - 基本语法
-  ```纯文本
+  ```
   find指令将从指定目录向下递归地遍历其各个子目录，将满足条件的文件显示在终端。
   find [搜索范围] [选项]
   ```
@@ -1081,22 +1081,22 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
     | -size<文件大小> | 按照指定的文件大小查找文件。   |
 -   实操案例
     -   （1）按文件名：根据名称查找/目录下的filename.txt文件。
-    ```纯文本
+    ```
     [root@centos100 ~]# find xiyou/ -name “*.txt”
     ```
     -   （2）按拥有者：查找/opt目录下，用户名称为-user的文件
-    ```纯文本
+    ```
     [root@centos100 ~]# find opt/ -user atguigu
     ```
     -   （3）按文件大小：在/home目录下查找大于200m的文件（+n 大于 -n小于  n等于）
-    ```纯文本
+    ```
     [root@centos100 ~]find /home -size +204800
     ```
 
 > grep 过滤查找及“|”管道符
 
 -   基本语法
-    ```纯文本
+    ```
     管道符，“|”，表示将前一个命令的处理结果输出传递给后面的命令处理
     grep 选项 查找内容 源文件   
 
@@ -1107,7 +1107,7 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
     | -n | 显示匹配及行号 |
 -   实操案例
     -   （1）查找某文件在第几行
-    ```纯文本
+    ```
     [root@centos100 ~]# ls | grep -n test
     ```
 
@@ -1116,18 +1116,18 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
 > gzip/gunzip 压缩
 
 -   基本语法
-    ```纯文本
+    ```
     gzip 文件       （功能描述：压缩文件，只能将文件压缩为*.gz文件）
     gunzip 文件.gz  （功能描述：解压缩文件命令）
     ```
 -   经验技巧
-    ```纯文本
+    ```
     （1）只能压缩文件,不能压缩目录
     （2）不保留原来的文件
     ```
 -   实操案例
     -   （1）gzip压缩
-    ```纯文本
+    ```
     [root@centos100 ~]# ls
     houge.txt
     [root@centos100 ~]# gzip houge.txt
@@ -1135,7 +1135,7 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
     houge.txt.gz
     ```
     -   （2）gunzip解压缩文件
-    ```纯文本
+    ```
     [root@centos100 ~]# gunzip houge.txt.gz 
     [root@centos100 ~]# ls
     houge.txt
@@ -1144,7 +1144,7 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
 > zip/unzip压缩
 
 -   基本语法
-    ```纯文本
+    ```
     zip [选项] XXX.zip 将要压缩的内容     （功能描述：压缩文件和目录的命令）
     ​unzip [选项] XXX.zip                （功能描述：解压缩文件）
     ```
@@ -1156,12 +1156,12 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
     | ------- | ------------ |
     | -d<目录>  | 指定解压后文件的存放目录 |
 -   经验技巧
-    ```纯文本
+    ```
     zip 压缩命令在window/linux都通用，**可以压缩目录且保留源文件**。
     ```
 -   实操案例
     -   （1）压缩文件&#x20;
-    ```纯文本
+    ```
     [root@centos100 opt]# touch bailongma.txt
     [root@centos100 ~]# zip houma.zip houge.txt bailongma.txt 
      adding: houge.txt (stored 0%)
@@ -1170,7 +1170,7 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
     houge.txt bailongma.txt  houma.zip 
     ```
     -   （2）解压文件
-    ```纯文本
+    ```
     [root@centos100 ~]# unzip houma.zip 
      Archive: houma.zip
      extracting: houge.txt        
@@ -1179,7 +1179,7 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
     houge.txt bailongma.txt  houma.zip
     ```
     -   （3）解压到指定目录-d
-    ```纯文本
+    ```
     [root@centos100 ~]# unzip houma.zip -d /opt
     [root@centos100 ~]# ls /opt/
     ```
@@ -1187,7 +1187,7 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
 > tar打包
 
 -   基本语法
-    ```纯文本
+    ```
     tar [选项] XXX.tar.gz 将要打包进去的内容  （功能描述：打包目录，压缩后的文件格式.tar.gz）
     ```
 -   选项说明
@@ -1200,7 +1200,7 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
     | -x | 解包.tar文件   |
 -   实操案例
     -   （1）压缩多个文件
-    ```纯文本
+    ```
     [root@centos100 opt]# tar -zcvf houma.tar.gz houge.txt bailongma.txt 
     houge.txt
     bailongma.txt
@@ -1208,7 +1208,7 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
     houma.tar.gz houge.txt bailongma.txt 
     ```
     -   （2）压缩目录
-    ```纯文本
+    ```
     [root@centos100 ~]# tar -zcvf xiyou.tar.gz xiyou/
     xiyou/
     xiyou/mingjie/
@@ -1216,11 +1216,11 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
     xiyou/qujing/houge.txt
     ```
     -   （3）解压到当前目录
-    ```纯文本
+    ```
     [root@centos100 ~]# tar -zxvf houma.tar.gz
     ```
     -   （4）解压到指定目录
-    ```纯文本
+    ```
     [root@centos100 ~]# tar -zxvf xiyou.tar.gz -C /opt
     [root@centos100 ~]# ll /opt/
     ```
@@ -1238,7 +1238,7 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
 > &#x20;df (disk free 空余硬盘)查看磁盘空间使用情况&#x20;
 
 -   基本语法
-    ```纯文本
+    ```
      df 选项 （功能描述：列出文件系统的整体磁盘使用量，检查文件系统的磁盘空间占用情况）
     ```
 -   选项说明
@@ -1247,7 +1247,7 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
     | -h | 以人们较易阅读的 GBytes, MBytes, KBytes 等格式自行显示； |
 -   实操案例
     -   （1）查看磁盘使用情况
-    ```纯文本
+    ```
     [root@centos100 ~]# df -h
     Filesystem   Size Used Avail Use% Mounted on
     /dev/sda2    15G 3.5G  11G 26% /
@@ -1257,7 +1257,7 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
 > fdisk 查看分区
 
 -   基本语法
-    ```纯文本
+    ```
      fdisk -l         （功能描述：查看磁盘分区详情）
     ```
 -   选项说明
@@ -1269,7 +1269,7 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
   -   该命令必须在root用户下才能使用
 - 功能说明
   -   （1）Linux分区
-  ```纯文本
+  ```
   Device：分区序列
   ​Boot：引导
   ​Start：从X磁柱开始
@@ -1285,7 +1285,7 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
         ![](..//image/f1_DJ7eqlCV4z.png)
 -   实操案例
     -   （1）查看系统分区情况
-    ```纯文本
+    ```
     [root@centos100 /]# fdisk -l
     Disk /dev/sda: 21.5 GB, 21474836480 bytes
     255 heads, 63 sectors/track, 2610 cylinders
@@ -1304,14 +1304,14 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
 > mount/umount 挂载/卸载
 
 -   什么是挂载卸载
-    ```纯文本
+    ```
     对于Linux用户来讲，不论有几个分区，分别分给哪一个目录使用，它总归就是一个根目录、一个独立且唯一的文件结构。
     Linux中每个分区都是用来组成整个文件系统的一部分，它在用一种叫做“挂载”的处理方法，它整个文件系统中包含了一整套的文件和目录，并将一个分区和一个目录联系起来，要载入的那个分区将使它的存储空间在这个目录下获得。
     ```
     -   (1)挂载前准备（必须要有光盘或者已经连接镜像文件）
         ![](..//image/g1_qpakRoM7Kj.png)
 -   基本语法
-    ```纯文本
+    ```
     mount [-t vfstype] [-o options] device dir （功能描述：挂载设备）
     umount 设备文件名或挂载点         （功能描述：卸载设备）
     ```
@@ -1324,17 +1324,17 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
     | dir        | 设备在系统上的挂接点(mount point)                                                                                                                                                                                                                                                |
 -   实操案例
     -   （1）挂载光盘镜像文件
-    ```纯文本
+    ```
     [root@centos100 ~]# mkdir /mnt/cdrom/          (建立挂载点)
     [root@centos100 ~]# mount -t iso9660 /dev/cdrom /mnt/cdrom/  (设备/dev/cdrom挂载到/mnt/cdrom中)
     [root@centos100 ~]# ll /mnt/cdrom/
     ```
     -   （2）卸载光盘镜像文件
-    ```纯文本
+    ```
     [root@centos100 ~]# umount /mnt/cdrom
     ```
     -   （3）设置开机自动挂载
-    ```纯文本
+    ```
     [root@centos100 ~]# vi /etc/fstab
     ```
     添加红框中内容，保存退出
@@ -1348,7 +1348,7 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
 > ps (process status 进程状态)查看当前系统进程状态
 
 -   基本语法
-    ```纯文本
+    ```
     ps -aux | grep xxx     （功能描述：查看系统中所有进程）
     ​ps -ef  | grep xxx     （功能描述：可以查看子父进程之间的关系）
     ```
@@ -1360,7 +1360,7 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
     | -x | 显示没有终端的进程   |
 -   功能说明
     -   （1）ps -aux显示信息说明
-    ```纯文本
+    ```
     USER：该进程是由哪个用户产生的
     PID：进程的ID号
     ​%CPU：该进程占用CPU资源的百分比，占用越高，进程越耗费资源；
@@ -1374,7 +1374,7 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
     ​COMMAND：产生此进程的命令名
     ```
     -   （2）ps -ef显示信息说明
-    ```纯文本
+    ```
     UID：用户ID 
     ​PID：进程ID 
     ​PPID：父进程ID 
@@ -1385,17 +1385,17 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
     ​CMD：启动进程所用的命令和参数
     ```
 -   经验技巧
-    ```纯文本
+    ```
     如果想查看进程的**CPU**占用率和内存占用率，可以使用aux;
     ​如果想查看**进程的父进程ID**可以使用ef;
     ```
 -   实操案例
-    ```纯文本
+    ```
     [root@centos100 datas]# ps -aux
 
     ```
     ![](..//image/p1_GgAHP9zqWq.png)
-    ```纯文本
+    ```
     [root@centos100 datas]# ps -ef
     ```
     ![](..//image/p2_t1GuZfOJOf.png)
@@ -1403,7 +1403,7 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
 > kill终止进程
 
 -   基本语法
-    ```纯文本
+    ```
      kill [选项] 进程号 （功能描述：通过进程号杀死进程）
     ​ killall 进程名称   （功能描述：通过进程名称杀死进程，也支持通配符） 
     ```
@@ -1413,11 +1413,11 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
     | -9 | 表示强迫进程立即停止 |
 -   实操案例
     -   （1）杀死浏览器进程
-    ```纯文本
+    ```
     [root@centos100 桌面]# kill -9 5102
     ```
     -   （2）通过进程名称杀死进程
-    ```纯文本
+    ```
     [root@centos100 桌面]# killall firefox
     ```
 
@@ -1426,14 +1426,14 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
 > crond服务管理
 
 -   重新启动crond服务
-    ```纯文本
+    ```
     [root@centos100 ~]# systemctl restart crond
     ```
 
 > crontab 定时任务设置
 
 -   基本语法
-    ```纯文本
+    ```
     crontab [选项]
     ```
 -   选项说明
@@ -1444,7 +1444,7 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
     | -f | 删除当前用户所有的crontab任务 |
 -   参数说明
     -   （1）进入crontab编辑界面。会打开vim编辑你的工作,通过 "\*    " 定义任务周期。
-        ```纯文本
+        ```
         [root@centos100 ~]# crontab -e 
         ```
         | 项目       | 选项         | 范围             |
@@ -1475,6 +1475,6 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
         ```
 -   实参案例
     -   （1）每隔1分钟，向/root/bailongma.txt文件中添加一一些内容
-    ```纯文本
+    ```
     */1 * * * * /bin/echo ”11” >> /root/bailongma.txt
     ```
