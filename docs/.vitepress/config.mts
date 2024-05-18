@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-
+import mdItCustomAttrs from 'markdown-it-custom-attrs'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "My Fish",
@@ -31,9 +31,30 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ],
+    outline: {
+      label: "页面导航",
+    },
     docFooter: {
       prev: '上一页',
       next: '下一页'
     }
-  }
+  },
+  // 给md文档配置图片点击放大
+  markdown: {
+    config: (md) => {
+      // use more markdown-it plugins!
+      md.use(mdItCustomAttrs, 'image', {
+        'data-fancybox': "gallery"
+      })
+    }
+  },
+
+  // 给md文档配置图片点击放大
+  head: [
+    [
+      "link",
+      { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" },
+    ],
+    ["script", { src: "https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js" }],
+  ]
 })
