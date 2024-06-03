@@ -10,7 +10,8 @@ export default defineConfig({
     'home/src/index.md': "index.md",
     '测试动态路由/src/测试.md': '测试.md',
     '服务器/src/静态网页和阿里云绑定.md': '服务器/静态网页和阿里云绑定.md',
-    'Linux/src/常见Linux命令.md': 'Linux/常见Linux命令.md'
+    'Linux/src/常见Linux命令.md': 'Linux/常见Linux命令.md',
+    '好玩的/src/KFC皮卡丘唱片机改造.md': '好玩的/KFC皮卡丘唱片机改造.md'
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -23,17 +24,21 @@ export default defineConfig({
       {
         items: [
           { text: '测试动态路由', link: '/测试' },
-          {
-            text: "Linux", collapsed: true, items: [
-              { text: '常见Linux命令', link: '/Linux/常见Linux命令' }
-            ]
-          },
+          // {
+          //   text: "Linux", collapsed: true, items: [
+          //     { text: '常见Linux命令', link: '/Linux/常见Linux命令' }
+          //   ]
+          // },
           {
             text: "服务器", collapsed: true, items: [
               { text: '静态网页和阿里云绑定', link: '/服务器/静态网页和阿里云绑定' }
             ]
           },
-
+          {
+            text: "好玩的", collapsed: true, items: [
+              { text: 'KFC皮卡丘唱片机改造', link: '/好玩的/KFC皮卡丘唱片机改造' }
+            ]
+          },
         ]
       }
     ],
